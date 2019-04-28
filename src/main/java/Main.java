@@ -6,10 +6,12 @@ public class Main {
     }
 
     private static void printTree(){
-        printCrown();
-
         //sparametryzuj drzewko :)
+        printCrown();
+        printTrunk();
+    }
 
+    private static void printTrunk() {
         for(int i = 1; i<=3;i++){
             printSpaces();
         }

@@ -3,9 +3,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Uczę się programowania i commitowania");
         printTree();
-        //printTree(2,2);
-        //printTree(3,2);
-        //printTree(10,10);
+        printTree(2,2);
+        printTree(3,2);
+        printTree(10,10);
+        printTree(1,1);
+        printTree(0,0);
     }
 
     private static void printTree() {
@@ -13,6 +15,11 @@ public class Main {
     }
 
     private static void printTree(int crownSize, int trunkSize) {
+        System.out.println("Print Tree Method - Crown Size = "+crownSize + " Trunk Size = "+trunkSize);
+        if(crownSize <1 || trunkSize < 1){
+            System.out.println("Przynajmniej jeden z parametrow jest mniejszy od 1, więc drzewko jest drukowane z parametrami domyślnymi");
+            printTree(4,2);
+        }
 
         printCrown(crownSize);
         printTrunk(crownSize, trunkSize);

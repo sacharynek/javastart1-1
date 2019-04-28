@@ -6,16 +6,8 @@ public class Main {
     }
 
     private static void printTree(){
-        for(int i = 1; i<=4; i++){
-            for(int j = 0; j<4-i;j++){
-                printSpaces();
-            }
-            for(int k =1; k<=2*i-1; k++){
-                printStars();
-            }
-            System.out.println();
-        }
-        //drukowanie pnia wyrzuc do innej metody
+        printCrown();
+
         //sparametryzuj drzewko :)
 
         for(int i = 1; i<=3;i++){
@@ -30,6 +22,20 @@ public class Main {
         printStars();
         System.out.println();
     }
+
+    private static void printCrown() {
+
+        for(int i = 1; i<=4; i++){
+            for(int j = 0; j<4-i; j++){
+                printSpaces();
+            }
+            for(int k =1; k<=2*i-1; k++){
+                printStars();
+            }
+            System.out.println();
+        }
+    }
+
 
     private static void printStars(){
         System.out.print("*");
